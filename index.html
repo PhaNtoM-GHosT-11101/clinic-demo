@@ -1,0 +1,1089 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Sunrise Dental Clinic — Modern Dentistry in Bengaluru</title>
+<meta name="description" content="Gentle, transparent dentistry in MG Road, Bengaluru. Same-day emergency slots, clear pricing, and WhatsApp booking in 30 seconds.">
+<meta property="og:title" content="Sunrise Dental Clinic — Modern Dentistry in Bengaluru">
+<meta property="og:description" content="Same-day emergency slots. Clear pricing. Book on WhatsApp in 30 seconds.">
+<meta property="og:type" content="website">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🦷</text></svg>">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,600;9..144,700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+<style>
+/* ══════════════════════ TOKENS ══════════════════════ */
+:root{
+  --ink:#0d1b24; --ink-2:#1c303c; --muted:#5f7480; --faint:#8a9ba5;
+  --teal:#0e7f6e; --teal-d:#0a5f53; --teal-l:#e9f5f2; --teal-xl:#f4fbf9;
+  --gold:#c8963e; --gold-l:#f6ecdb;
+  --line:#e4ebee; --line-2:#eef3f5;
+  --bg:#ffffff; --bg-2:#f8fafb; --bg-3:#f2f6f7;
+  --white:#fff;
+  --wa:#25d366; --wa-d:#128c7e;
+  --r-s:8px; --r:12px; --r-l:18px; --r-xl:26px;
+  --sh-1:0 1px 2px rgba(13,27,36,.05), 0 2px 8px rgba(13,27,36,.05);
+  --sh-2:0 2px 6px rgba(13,27,36,.06), 0 14px 34px rgba(13,27,36,.09);
+  --sh-3:0 4px 10px rgba(13,27,36,.07), 0 26px 60px rgba(13,27,36,.14);
+  --sh-teal:0 10px 30px rgba(14,127,110,.26);
+  --max:1180px;
+  --ease:cubic-bezier(.2,.8,.3,1);
+}
+
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
+body{
+  font-family:'Inter',-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;
+  color:var(--ink); background:var(--bg); line-height:1.62;
+  font-size:16px; -webkit-font-smoothing:antialiased; overflow-x:hidden;
+}
+img{max-width:100%;display:block}
+a{color:inherit;text-decoration:none}
+button{font-family:inherit}
+h1,h2,h3,h4{font-family:'Fraunces',Georgia,serif;font-weight:600;line-height:1.1;letter-spacing:-.02em}
+::selection{background:var(--teal);color:#fff}
+
+.wrap{max-width:var(--max);margin:0 auto;padding:0 24px}
+
+/* ══════════════════════ BUTTONS ══════════════════════ */
+.btn{
+  display:inline-flex;align-items:center;justify-content:center;gap:9px;
+  padding:14px 27px;border-radius:100px;font-weight:600;font-size:15px;
+  border:1.5px solid transparent;cursor:pointer;white-space:nowrap;
+  transition:transform .2s var(--ease), box-shadow .2s var(--ease), background .2s, border-color .2s;
+}
+.btn:active{transform:scale(.98)}
+.btn-primary{background:var(--teal);color:#fff;box-shadow:var(--sh-teal)}
+.btn-primary:hover{background:var(--teal-d);transform:translateY(-2px);box-shadow:0 14px 38px rgba(14,127,110,.34)}
+.btn-wa{background:var(--wa);color:#fff;box-shadow:0 10px 30px rgba(37,211,102,.3)}
+.btn-wa:hover{background:#1fbc5a;transform:translateY(-2px);box-shadow:0 14px 38px rgba(37,211,102,.38)}
+.btn-ghost{background:var(--white);color:var(--ink);border-color:var(--line)}
+.btn-ghost:hover{border-color:var(--teal);color:var(--teal);transform:translateY(-2px);box-shadow:var(--sh-1)}
+.btn-light{background:#fff;color:var(--teal-d)}
+.btn-light:hover{background:var(--teal-xl);transform:translateY(-2px)}
+
+/* ══════════════════════ ANNOUNCE ══════════════════════ */
+.announce{background:var(--ink);color:#fff;font-size:13px;padding:9px 0;text-align:center}
+.announce b{color:#7fe3c4;font-weight:600}
+.announce .dot{display:inline-block;width:6px;height:6px;border-radius:50%;background:#4ade80;margin-right:8px;animation:pulse 2s infinite}
+@keyframes pulse{0%,100%{opacity:1;box-shadow:0 0 0 0 rgba(74,222,128,.6)}50%{opacity:.7;box-shadow:0 0 0 6px rgba(74,222,128,0)}}
+
+/* ══════════════════════ HEADER ══════════════════════ */
+header{
+  position:sticky;top:0;z-index:70;background:rgba(255,255,255,.82);
+  backdrop-filter:saturate(180%) blur(16px);-webkit-backdrop-filter:saturate(180%) blur(16px);
+  border-bottom:1px solid transparent;transition:border-color .3s, box-shadow .3s;
+}
+header.stuck{border-bottom-color:var(--line);box-shadow:0 1px 20px rgba(13,27,36,.05)}
+.nav{display:flex;align-items:center;justify-content:space-between;height:74px;gap:20px}
+.brand{display:flex;align-items:center;gap:12px;min-width:0}
+.brand-mark{
+  width:42px;height:42px;border-radius:12px;flex:none;display:grid;place-items:center;
+  background:linear-gradient(140deg,var(--teal) 0%,var(--teal-d) 100%);
+  color:#fff;box-shadow:var(--sh-teal);position:relative;overflow:hidden;
+}
+.brand-mark span{font-size:19px;z-index:1}
+.brand-txt strong{display:block;font-family:'Fraunces',serif;font-size:17px;font-weight:600;letter-spacing:-.3px;line-height:1.2}
+.brand-txt em{display:block;font-style:normal;font-size:11px;color:var(--faint);letter-spacing:.14em;text-transform:uppercase;font-weight:500}
+.nav-links{display:flex;gap:32px;font-size:14.5px;font-weight:500}
+.nav-links a{position:relative;color:var(--muted);transition:color .2s}
+.nav-links a::after{content:'';position:absolute;left:0;bottom:-6px;width:0;height:1.5px;background:var(--teal);transition:width .28s var(--ease)}
+.nav-links a:hover{color:var(--ink)}
+.nav-links a:hover::after{width:100%}
+.nav-right{display:flex;align-items:center;gap:12px}
+.nav-tel{display:flex;align-items:center;gap:8px;font-weight:600;font-size:14.5px;color:var(--ink);padding-right:4px}
+.nav-tel svg{color:var(--teal)}
+.burger{display:none;width:42px;height:42px;border:1px solid var(--line);background:#fff;border-radius:11px;cursor:pointer;align-items:center;justify-content:center}
+.burger i{display:block;width:17px;height:1.6px;background:var(--ink);position:relative}
+.burger i::before,.burger i::after{content:'';position:absolute;left:0;width:17px;height:1.6px;background:var(--ink);transition:transform .25s}
+.burger i::before{top:-5.5px}.burger i::after{top:5.5px}
+.burger.on i{background:transparent}
+.burger.on i::before{transform:translateY(5.5px) rotate(45deg)}
+.burger.on i::after{transform:translateY(-5.5px) rotate(-45deg)}
+.mobile-menu{display:none;border-top:1px solid var(--line);background:#fff;padding:12px 24px 22px}
+.mobile-menu.on{display:block}
+.mobile-menu a{display:block;padding:13px 0;font-weight:550;font-size:15.5px;border-bottom:1px solid var(--line-2);color:var(--ink-2)}
+.mobile-menu .btn{width:100%;margin-top:16px}
+
+/* ══════════════════════ HERO ══════════════════════ */
+/* bottom padding reserves room for the phone mockup, which is taller than the
+   hero copy and would otherwise be clipped by the trust strip below it. */
+.hero{position:relative;overflow:hidden;background:var(--teal-xl);padding:76px 0 150px}
+.hero::before{
+  content:'';position:absolute;width:820px;height:820px;right:-260px;top:-320px;border-radius:50%;
+  background:radial-gradient(circle at 30% 30%, rgba(14,127,110,.16), rgba(14,127,110,0) 68%);
+}
+.hero::after{
+  content:'';position:absolute;width:620px;height:620px;left:-240px;bottom:-330px;border-radius:50%;
+  background:radial-gradient(circle at 50% 50%, rgba(200,150,62,.15), rgba(200,150,62,0) 68%);
+}
+.hero-grid{position:relative;display:grid;grid-template-columns:1.02fr .98fr;gap:64px;align-items:center}
+.badge{
+  display:inline-flex;align-items:center;gap:8px;background:#fff;color:var(--teal-d);
+  font-size:12.5px;font-weight:650;letter-spacing:.05em;text-transform:uppercase;
+  padding:8px 15px;border-radius:100px;box-shadow:var(--sh-1);margin-bottom:24px;
+}
+.badge i{width:6px;height:6px;border-radius:50%;background:#22c55e;animation:pulse 2s infinite}
+h1{font-size:clamp(38px,5.1vw,60px);line-height:1.04;letter-spacing:-.035em;margin-bottom:22px}
+h1 em{font-style:normal;color:var(--teal);position:relative;white-space:nowrap}
+h1 em::after{
+  content:'';position:absolute;left:0;right:0;bottom:4px;height:11px;
+  background:linear-gradient(90deg,rgba(200,150,62,.32),rgba(200,150,62,.1));
+  border-radius:3px;z-index:-1;
+}
+.lede{font-size:18px;color:var(--muted);max-width:490px;margin-bottom:32px}
+.hero-btns{display:flex;gap:13px;flex-wrap:wrap;margin-bottom:34px}
+.hero-chips{display:flex;gap:26px;flex-wrap:wrap;padding-top:26px;border-top:1px solid var(--line)}
+.chip{display:flex;align-items:center;gap:9px;font-size:13.5px;font-weight:550;color:var(--ink-2)}
+.chip i{
+  width:26px;height:26px;border-radius:8px;background:var(--teal-l);color:var(--teal);
+  display:grid;place-items:center;font-style:normal;font-size:13px;flex:none;
+}
+
+/* hero visual */
+.hero-vis{position:relative}
+.hero-photo{
+  border-radius:var(--r-xl);overflow:hidden;box-shadow:var(--sh-3);
+  aspect-ratio:4/4.4;background:linear-gradient(140deg,var(--teal-l),#d9e9e5);
+}
+.hero-photo img{width:100%;height:100%;object-fit:cover}
+.hero-photo::after{content:'';position:absolute;inset:0;background:linear-gradient(to top,rgba(13,27,36,.34),transparent 46%);border-radius:var(--r-xl)}
+
+.float-card{
+  position:absolute;background:rgba(255,255,255,.93);backdrop-filter:blur(12px);
+  border:1px solid rgba(255,255,255,.85);border-radius:var(--r-l);box-shadow:var(--sh-2);
+  padding:15px 18px;z-index:3;animation:floaty 5.5s ease-in-out infinite;
+}
+@keyframes floaty{0%,100%{transform:translateY(0)}50%{transform:translateY(-9px)}}
+/* the phone mockup sits on the photo's left edge, so floating cards live right */
+.fc-1{top:22px;right:-22px;display:flex;align-items:center;gap:12px}
+.fc-1 .ico{width:38px;height:38px;border-radius:11px;background:#fef3c7;color:#b45309;display:grid;place-items:center;font-size:18px;flex:none}
+.fc-1 b{display:block;font-size:14px;line-height:1.3}
+.fc-1 span{font-size:12px;color:var(--muted)}
+.fc-2{bottom:34px;right:-26px;text-align:center;padding:18px 22px;animation-delay:1.4s}
+.fc-2 .stars{color:var(--gold);font-size:14px;letter-spacing:1.5px}
+.fc-2 b{display:block;font-family:'Fraunces',serif;font-size:29px;line-height:1.1;margin:3px 0}
+.fc-2 span{font-size:12px;color:var(--muted)}
+
+/* ══════════════════════ LOGO STRIP ══════════════════════ */
+.trust-strip{background:var(--ink);padding:22px 0;overflow:hidden}
+.trust-strip .wrap{display:flex;align-items:center;justify-content:center;gap:20px 40px;flex-wrap:wrap}
+.ts-item{display:flex;align-items:center;gap:9px;color:#fff;opacity:.62;font-size:12.5px;font-weight:600;letter-spacing:.08em;text-transform:uppercase;white-space:nowrap}
+.ts-item svg{color:#4ade80;flex:none}
+
+/* ══════════════════════ STATS ══════════════════════ */
+.stats{background:var(--ink);color:#fff;padding:0 0 62px}
+.stats-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:30px;text-align:center;margin-top:-1px}
+.stat b{display:block;font-family:'Fraunces',serif;font-size:clamp(30px,3.6vw,42px);font-weight:600;letter-spacing:-.02em;line-height:1.1;color:#7fe3c4}
+.stat span{font-size:13px;opacity:.62;display:block;margin-top:5px}
+
+/* ══════════════════════ SECTION ══════════════════════ */
+section{padding:96px 0}
+.sec-head{max-width:640px;margin:0 auto 54px;text-align:center}
+.sec-tag{
+  display:inline-block;font-size:12px;font-weight:700;letter-spacing:.16em;text-transform:uppercase;
+  color:var(--teal);background:var(--teal-l);padding:6px 14px;border-radius:100px;margin-bottom:17px;
+}
+.sec-head h2{font-size:clamp(29px,3.7vw,42px);margin-bottom:15px;letter-spacing:-.03em}
+.sec-head h2 em{font-style:normal;color:var(--teal)}
+.sec-head p{color:var(--muted);font-size:17px}
+
+/* ══════════════════════ TREATMENTS ══════════════════════ */
+.treat-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px}
+.treat{
+  background:#fff;border:1px solid var(--line);border-radius:var(--r-xl);overflow:hidden;
+  display:flex;flex-direction:column;
+  transition:transform .3s var(--ease), box-shadow .3s var(--ease), border-color .3s;
+}
+.treat:hover{transform:translateY(-6px);box-shadow:var(--sh-2);border-color:transparent}
+.treat-img{aspect-ratio:16/10;overflow:hidden;position:relative;background:linear-gradient(140deg,var(--teal-l),#d3e8e2)}
+/* If an image ever fails, the tile still reads as intentional rather than broken. */
+.treat-img::after{content:'🦷';position:absolute;inset:0;display:grid;place-items:center;font-size:44px;opacity:.32;z-index:0}
+.treat-img img{width:100%;height:100%;object-fit:cover;transition:transform .55s var(--ease);position:relative;z-index:1}
+.treat:hover .treat-img img{transform:scale(1.07)}
+.treat-badge{
+  position:absolute;top:13px;left:13px;background:rgba(255,255,255,.95);color:var(--teal-d);
+  font-size:11.5px;font-weight:700;letter-spacing:.05em;padding:5px 11px;border-radius:100px;z-index:2;
+}
+.treat-body{padding:24px 24px 26px;display:flex;flex-direction:column;flex:1}
+.treat-body h3{font-size:20px;margin-bottom:9px}
+.treat-body p{color:var(--muted);font-size:14.6px;margin-bottom:18px;flex:1}
+.treat-foot{display:flex;align-items:center;justify-content:space-between;padding-top:17px;border-top:1px solid var(--line-2)}
+.treat-price{font-family:'Fraunces',serif;font-size:19px;font-weight:600;color:var(--ink)}
+.treat-link{font-size:13.5px;font-weight:650;color:var(--teal);display:flex;align-items:center;gap:5px;transition:gap .2s}
+.treat:hover .treat-link{gap:9px}
+
+/* ══════════════════════ TRANSFORM ══════════════════════ */
+.transform{background:var(--bg-3);position:relative;overflow:hidden}
+.transform::before{
+  content:'';position:absolute;width:560px;height:560px;right:-200px;top:50%;transform:translateY(-50%);
+  background:radial-gradient(circle,rgba(14,127,110,.09),transparent 68%);border-radius:50%;
+}
+.ba{display:grid;grid-template-columns:1fr 62px 1fr;align-items:center;gap:0;max-width:820px;margin:0 auto;position:relative}
+.ba-box{border-radius:var(--r-xl);overflow:hidden;box-shadow:var(--sh-2);position:relative;aspect-ratio:4/3.1;background:var(--teal-l)}
+.ba-box img{width:100%;height:100%;object-fit:cover}
+.ba-tag{
+  position:absolute;top:14px;left:14px;padding:6px 13px;border-radius:100px;
+  font-size:11.5px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;z-index:2;
+}
+.ba-1 .ba-tag{background:rgba(13,27,36,.82);color:#fff}
+.ba-2 .ba-tag{background:rgba(14,127,110,.94);color:#fff}
+.ba-1 img{filter:grayscale(.85) contrast(.92) brightness(.94)}
+.ba-div{display:grid;place-items:center}
+.ba-div span{
+  width:50px;height:50px;border-radius:50%;background:#fff;box-shadow:var(--sh-2);
+  display:grid;place-items:center;font-size:15px;color:var(--teal);font-weight:700;z-index:2;
+}
+.ba-note{text-align:center;margin-top:28px;font-size:14px;color:var(--muted)}
+.ba-note b{color:var(--ink)}
+
+/* ══════════════════════ WHY / FEATURES ══════════════════════ */
+.why-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:22px}
+.why{text-align:center;padding:34px 22px}
+.why-ico{
+  width:58px;height:58px;border-radius:18px;margin:0 auto 19px;display:grid;place-items:center;
+  background:linear-gradient(140deg,var(--teal-l),#d5ebe5);color:var(--teal);font-size:25px;
+  box-shadow:inset 0 1px 0 #fff;
+}
+.why h4{font-size:17.5px;margin-bottom:9px;font-family:'Inter',sans-serif;font-weight:650;letter-spacing:0}
+.why p{font-size:14.5px;color:var(--muted)}
+
+/* ══════════════════════ DOCTOR ══════════════════════ */
+.doc{background:var(--white);border-block:1px solid var(--line)}
+.doc-grid{display:grid;grid-template-columns:.88fr 1.12fr;gap:60px;align-items:center}
+.doc-photo{border-radius:var(--r-xl);overflow:hidden;box-shadow:var(--sh-3);position:relative;aspect-ratio:4/4.6;background:var(--teal-l)}
+.doc-photo img{width:100%;height:100%;object-fit:cover}
+.doc-badge{
+  position:absolute;bottom:0;left:0;right:0;padding:26px 24px 22px;color:#fff;
+  background:linear-gradient(to top,rgba(13,27,36,.9),transparent);
+}
+.doc-badge b{font-family:'Fraunces',serif;font-size:21px;display:block;line-height:1.2}
+.doc-badge span{font-size:13px;opacity:.85}
+.doc-cred{display:flex;flex-wrap:wrap;gap:9px;margin:26px 0}
+.cred{
+  font-size:12.5px;font-weight:600;color:var(--ink-2);background:var(--bg-3);
+  border:1px solid var(--line);padding:7px 14px;border-radius:100px;
+}
+.doc-quote{
+  border-left:3px solid var(--teal);padding:4px 0 4px 22px;margin:28px 0;
+  font-family:'Fraunces',serif;font-size:20px;line-height:1.5;color:var(--ink-2);font-style:italic;
+}
+.doc-sign{display:flex;align-items:center;gap:13px}
+.doc-sign .sg{
+  font-family:'Fraunces',serif;font-size:21px;font-style:italic;color:var(--teal);
+  border-bottom:1.5px solid var(--teal);padding-bottom:2px;
+}
+.doc-sign span{font-size:12.5px;color:var(--faint);display:block}
+
+/* ══════════════════════ PRICING ══════════════════════ */
+.price-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px;align-items:start}
+.plan{background:#fff;border:1px solid var(--line);border-radius:var(--r-xl);padding:32px 28px;position:relative;transition:transform .3s var(--ease),box-shadow .3s var(--ease)}
+.plan:hover{transform:translateY(-4px);box-shadow:var(--sh-2)}
+.plan-featured{border:1.5px solid var(--teal);box-shadow:var(--sh-2);position:relative}
+.plan-flag{
+  position:absolute;top:-13px;left:50%;transform:translateX(-50%);background:var(--teal);color:#fff;
+  font-size:11.5px;font-weight:700;letter-spacing:.09em;text-transform:uppercase;
+  padding:6px 17px;border-radius:100px;box-shadow:var(--sh-teal);white-space:nowrap;
+}
+.plan h3{font-size:22px;margin-bottom:6px}
+.plan-sub{font-size:13.5px;color:var(--muted);margin-bottom:22px}
+.plan-amt{display:flex;align-items:baseline;gap:6px;margin-bottom:6px}
+.plan-amt b{font-family:'Fraunces',serif;font-size:42px;font-weight:600;letter-spacing:-.03em;line-height:1}
+.plan-amt span{font-size:14px;color:var(--muted)}
+.plan-list{list-style:none;margin:24px 0;padding-top:24px;border-top:1px solid var(--line-2)}
+.plan-list li{display:flex;gap:11px;font-size:14.6px;margin-bottom:13px;color:var(--ink-2);align-items:flex-start}
+.plan-list li::before{content:'✓';color:var(--teal);font-weight:800;flex:none;font-size:14px;line-height:1.5}
+.plan .btn{width:100%}
+
+/* ══════════════════════ REVIEWS ══════════════════════ */
+.rev-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px}
+.rev{background:#fff;border:1px solid var(--line);border-radius:var(--r-xl);padding:30px 28px;display:flex;flex-direction:column;transition:transform .3s var(--ease),box-shadow .3s var(--ease)}
+.rev:hover{transform:translateY(-4px);box-shadow:var(--sh-2)}
+.rev-stars{color:var(--gold);font-size:14px;letter-spacing:2px;margin-bottom:15px}
+.rev p{font-size:15.4px;color:var(--ink-2);flex:1;margin-bottom:22px}
+.rev-who{display:flex;align-items:center;gap:12px;padding-top:19px;border-top:1px solid var(--line-2)}
+.rev-av{width:42px;height:42px;border-radius:50%;background:linear-gradient(140deg,var(--teal),var(--teal-d));color:#fff;display:grid;place-items:center;font-weight:650;font-size:14.5px;flex:none;letter-spacing:.02em}
+.rev-who b{display:block;font-size:14.5px;line-height:1.35}
+.rev-who span{font-size:12.5px;color:var(--faint)}
+
+/* ══════════════════════ FAQ ══════════════════════ */
+.faq{max-width:780px;margin:0 auto}
+.faq-item{background:#fff;border:1px solid var(--line);border-radius:var(--r);margin-bottom:12px;overflow:hidden;transition:border-color .25s,box-shadow .25s}
+.faq-item.open{border-color:var(--teal);box-shadow:var(--sh-1)}
+.faq-q{width:100%;background:none;border:none;text-align:left;padding:20px 22px;cursor:pointer;display:flex;align-items:center;justify-content:space-between;gap:16px;font-weight:600;font-size:15.6px;color:var(--ink)}
+.faq-q i{width:26px;height:26px;border-radius:50%;background:var(--bg-3);color:var(--teal);display:grid;place-items:center;flex:none;font-style:normal;font-size:17px;font-weight:400;transition:transform .3s var(--ease),background .25s,color .25s}
+.faq-item.open .faq-q i{transform:rotate(45deg);background:var(--teal);color:#fff}
+.faq-a{max-height:0;overflow:hidden;transition:max-height .35s var(--ease)}
+.faq-a p{padding:0 22px 22px;color:var(--muted);font-size:15px}
+
+/* ══════════════════════ CTA ══════════════════════ */
+.cta-band{position:relative;overflow:hidden;background:linear-gradient(135deg,var(--teal) 0%,var(--teal-d) 100%);color:#fff}
+.cta-band::after{
+  content:'';position:absolute;width:600px;height:600px;right:-160px;top:-240px;border-radius:50%;
+  background:radial-gradient(circle,rgba(255,255,255,.13),transparent 66%);
+}
+.cta-inner{position:relative;text-align:center;max-width:660px;margin:0 auto;padding:78px 24px}
+.cta-inner h2{font-size:clamp(27px,3.6vw,40px);margin-bottom:15px;letter-spacing:-.03em}
+.cta-inner p{font-size:17.5px;opacity:.9;margin-bottom:30px}
+.cta-btns{display:flex;gap:13px;justify-content:center;flex-wrap:wrap}
+.cta-note{margin-top:26px;font-size:13px;opacity:.72}
+
+/* ══════════════════════ FOOTER ══════════════════════ */
+footer{background:var(--ink);color:#fff;padding:70px 0 30px}
+.foot-grid{display:grid;grid-template-columns:1.7fr 1fr 1fr 1.25fr;gap:44px;padding-bottom:46px;border-bottom:1px solid rgba(255,255,255,.1)}
+.foot h5{font-size:12px;text-transform:uppercase;letter-spacing:.14em;opacity:.5;margin-bottom:17px;font-weight:650}
+.foot a{display:block;font-size:14.6px;opacity:.72;padding:5px 0;transition:opacity .2s,color .2s}
+.foot a:hover{opacity:1;color:#7fe3c4}
+.foot p{font-size:14.4px;opacity:.6;line-height:1.75}
+.foot .brand-txt strong{color:#fff}
+.foot .brand-txt em{color:rgba(255,255,255,.42)}
+.foot-ico{display:flex;gap:11px;margin-top:18px}
+.foot-ico a{width:36px;height:36px;border-radius:10px;background:rgba(255,255,255,.08);display:grid;place-items:center;transition:background .2s}
+.foot-ico a:hover{background:var(--teal)}
+.hours-row{display:flex;justify-content:space-between;font-size:14px;padding:7px 0;opacity:.7}
+.hours-row b{font-weight:550;opacity:1}
+.map-card{margin-top:46px;border-radius:var(--r-l);overflow:hidden;border:1px solid rgba(255,255,255,.1);background:rgba(255,255,255,.04);padding:22px;display:flex;gap:18px;align-items:center}
+.map-card .pin{width:44px;height:44px;border-radius:12px;background:var(--teal);display:grid;place-items:center;font-size:20px;flex:none}
+.map-card b{display:block;font-size:15.5px;margin-bottom:3px}
+.map-card span{font-size:13.4px;opacity:.55}
+.concept-note{
+  margin-top:26px;padding:15px 20px;border-radius:var(--r);
+  background:rgba(255,255,255,.05);border:1px solid rgba(255,255,255,.12);
+  font-size:12.5px;line-height:1.6;color:rgba(255,255,255,.62);text-align:center;
+}
+.concept-note strong{color:#7fe3c4;font-weight:650}
+.copy{text-align:center;font-size:13px;opacity:.42;padding-top:26px;display:flex;justify-content:center;gap:16px;flex-wrap:wrap}
+.copy a{opacity:1;font-size:13px}
+
+/* ══════════════════════ CHAT MOCKUP ══════════════════════ */
+.phone{
+  width:288px;height:600px;background:#0d1b24;border-radius:40px;padding:11px;margin:0 auto;
+  box-shadow:0 30px 70px rgba(13,27,36,.28), 0 0 0 1.5px rgba(255,255,255,.1) inset;position:relative;
+}
+.phone::after{content:'';position:absolute;left:50%;transform:translateX(-50%);bottom:7px;width:92px;height:3.5px;border-radius:2px;background:rgba(255,255,255,.28);z-index:5}
+.screen{background:#fff;border-radius:31px;height:100%;overflow:hidden;display:flex;flex-direction:column;position:relative}
+.notch{height:26px;flex:none;position:relative}
+.notch::after{content:'';position:absolute;left:50%;top:7px;transform:translateX(-50%);width:74px;height:19px;background:#0d1b24;border-radius:100px}
+.wa-head{background:var(--wa-d);color:#fff;padding:8px 14px 11px;display:flex;align-items:center;gap:10px;flex:none}
+.wa-av{width:34px;height:34px;border-radius:50%;background:#fff;color:var(--wa-d);display:grid;place-items:center;font-weight:700;font-size:13px;flex:none}
+.wa-nm{font-size:13.6px;font-weight:600;line-height:1.3}
+.wa-st{font-size:11px;opacity:.86;display:flex;align-items:center;gap:4px}
+.wa-body{flex:1;background:#efeae3;padding:13px 11px;display:flex;flex-direction:column;gap:7px;overflow:hidden;position:relative}
+.wa-body::before{content:'';position:absolute;inset:0;background-image:radial-gradient(rgba(0,0,0,.03) 1px,transparent 1px);background-size:16px 16px;pointer-events:none}
+.bubble{max-width:82%;padding:8px 11px 7px;border-radius:9px;font-size:12.7px;line-height:1.45;position:relative;opacity:0;transform:translateY(10px) scale(.96);animation:pop .4s cubic-bezier(.2,.9,.3,1.25) forwards;box-shadow:0 1px 1px rgba(0,0,0,.06)}
+.bubble.in{background:#fff;border-top-left-radius:2px;align-self:flex-start}
+.bubble.out{background:#dcf8c6;align-self:flex-end;border-top-right-radius:2px}
+.bubble .tm{display:block;font-size:9.5px;color:#667781;margin-top:2px;text-align:right}
+.bubble.out .tm{color:#4d9e8e}
+@keyframes pop{to{opacity:1;transform:translateY(0) scale(1)}}
+.wa-in{background:#fff;border-top:1px solid var(--line);padding:9px 11px;display:flex;align-items:center;gap:8px;flex:none;padding-bottom:16px}
+.wa-fake{flex:1;background:#f0f2f3;height:32px;border-radius:9px}
+.wa-send{width:32px;height:32px;border-radius:50%;background:var(--wa);display:grid;place-items:center;flex:none}
+.hero-chat{position:absolute;bottom:-34px;left:-46px;z-index:4;animation:floaty 6s ease-in-out infinite;animation-delay:.6s}
+.hero-chat-cap{
+  position:absolute;bottom:-72px;left:50%;transform:translateX(-50%);white-space:nowrap;
+  font-size:12px;color:var(--teal-d);font-weight:600;background:#fff;padding:7px 15px;
+  border-radius:100px;box-shadow:var(--sh-1);border:1px solid var(--line);z-index:4;
+}
+
+/* ══════════════════════ FLOATING ══════════════════════ */
+.wa-float{
+  position:fixed;right:24px;bottom:24px;z-index:80;background:var(--wa);color:#fff;
+  border:none;border-radius:100px;padding:14px 22px;display:flex;align-items:center;gap:10px;
+  font-weight:650;font-size:15px;cursor:pointer;font-family:inherit;
+  box-shadow:0 8px 28px rgba(37,211,102,.42);transition:transform .22s var(--ease),box-shadow .22s;
+}
+.wa-float:hover{transform:translateY(-3px) scale(1.03);box-shadow:0 14px 36px rgba(37,211,102,.5)}
+.wa-float::before{
+  content:'';position:absolute;inset:0;border-radius:100px;border:2px solid var(--wa);
+  animation:ring 2.4s ease-out infinite;
+}
+@keyframes ring{0%{opacity:.6;transform:scale(1)}100%{opacity:0;transform:scale(1.16)}}
+
+.mobile-bar{
+  position:fixed;left:0;right:0;bottom:0;z-index:79;background:#fff;border-top:1px solid var(--line);
+  display:none;padding:10px 14px calc(10px + env(safe-area-inset-bottom));gap:10px;
+}
+.mobile-bar .btn{flex:1;padding:12px 10px;font-size:14px}
+
+/* ══════════════════════ MODAL ══════════════════════ */
+.modal-bg{position:fixed;inset:0;background:rgba(10,25,35,.6);z-index:100;display:none;align-items:center;justify-content:center;padding:22px;backdrop-filter:blur(4px)}
+.modal-bg.on{display:flex;animation:fade .2s}
+@keyframes fade{from{opacity:0}to{opacity:1}}
+.modal{background:#fff;border-radius:20px;width:100%;max-width:376px;overflow:hidden;box-shadow:0 30px 70px rgba(0,0,0,.34);animation:rise .28s cubic-bezier(.2,.9,.3,1.1)}
+@keyframes rise{from{transform:translateY(20px) scale(.97);opacity:0}to{transform:translateY(0) scale(1);opacity:1}}
+.modal-head{background:var(--wa-d);color:#fff;padding:13px 16px;display:flex;align-items:center;gap:11px}
+.modal-x{margin-left:auto;cursor:pointer;font-size:24px;line-height:1;background:none;border:none;color:#fff;opacity:.85;padding:0 2px}
+.modal-body{background:#efeae3;padding:15px 12px;height:392px;display:flex;flex-direction:column;gap:7px;overflow-y:auto}
+.modal-foot{background:#fff;padding:11px 13px;display:flex;gap:9px;align-items:center}
+.modal-foot input{flex:1;border:1px solid var(--line);border-radius:100px;padding:11px 16px;font-family:inherit;font-size:14.2px;outline:none;background:var(--bg-3)}
+.modal-foot input:focus{border-color:var(--wa);background:#fff}
+.modal-send{background:var(--wa);color:#fff;border:none;border-radius:50%;width:42px;height:42px;display:grid;place-items:center;cursor:pointer;flex:none;transition:background .2s}
+.modal-send:hover{background:#1fbc5a}
+.typing{display:flex;gap:4px;padding:13px 15px;background:#fff;border-radius:9px;align-self:flex-start;box-shadow:0 1px 1px rgba(0,0,0,.06)}
+.typing i{width:7px;height:7px;border-radius:50%;background:#b6c3c9;animation:blink 1.3s infinite}
+.typing i:nth-child(2){animation-delay:.2s}.typing i:nth-child(3){animation-delay:.4s}
+@keyframes blink{0%,60%,100%{opacity:.28;transform:translateY(0)}30%{opacity:1;transform:translateY(-3px)}}
+
+/* ══════════════════════ REVEAL ══════════════════════ */
+/* Gated behind .js so that if JavaScript is disabled, slow, or fails, the page
+   still renders fully visible. A demo that shows a blank screen to a clinic
+   owner is worse than no demo at all. */
+.js .reveal{opacity:0;transform:translateY(22px);transition:opacity .65s var(--ease),transform .65s var(--ease)}
+.js .reveal.in{opacity:1;transform:translateY(0)}
+.js .img-reveal{overflow:hidden}
+.js .img-reveal img{transform:scale(1.08);transition:transform 1.1s var(--ease)}
+.js .img-reveal.in img{transform:scale(1)}
+
+@media(prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}html{scroll-behavior:auto}}
+
+@media(max-width:1024px){
+  .nav-links,.nav-tel{display:none}
+  .burger{display:flex}
+  .hero-grid{grid-template-columns:1fr;gap:80px}
+  .hero-vis{max-width:480px;margin:0 auto}
+  .hero-chat{left:0;bottom:-40px}
+  .doc-grid{grid-template-columns:1fr;gap:40px}
+  .doc-photo{max-width:400px}
+  .treat-grid,.rev-grid{grid-template-columns:1fr 1fr}
+  .why-grid{grid-template-columns:1fr 1fr}
+  .price-grid{grid-template-columns:1fr;max-width:440px;margin:0 auto}
+  .foot-grid{grid-template-columns:1fr 1fr;gap:34px}
+  .fc-1{left:-14px}.fc-2{right:-10px}
+}
+@media(max-width:680px){
+  .wrap{padding:0 18px}
+  section{padding:70px 0}
+  .hero{padding:52px 0 120px}
+  h1{font-size:32px}
+  .lede{font-size:16.5px}
+  .hero-btns .btn{flex:1 1 100%}
+  .hero-chips{gap:16px}
+  .chip{font-size:12.5px}
+  .treat-grid,.rev-grid,.why-grid{grid-template-columns:1fr}
+  .ba{grid-template-columns:1fr;gap:12px}
+  .ba-div{transform:rotate(90deg);height:44px}
+  .ba-box{aspect-ratio:16/10}
+  .stats-grid{grid-template-columns:1fr 1fr;gap:24px}
+  .foot-grid{grid-template-columns:1fr;gap:30px}
+  .wa-float{bottom:82px;right:16px;padding:12px 18px;font-size:14px}
+  .mobile-bar{display:flex}
+  .phone{width:260px;height:552px}
+  .hero-vis{padding-bottom:20px}
+  .fc-2 b{font-size:24px}
+}
+</style>
+</head>
+<body>
+
+<!-- ══════════════════════════════════════════════════════════════
+     ⚙️  CLINIC CONFIG — the only block you edit when cloning
+     ══════════════════════════════════════════════════════════════ -->
+<script>
+window.CLINIC = {
+  name:     "Sunrise Dental Clinic",
+  since:    "Est. 2012",
+  tagline:  "Modern Dentistry, MG Road",
+  address:  "2nd Floor, Orion Plaza, 100 Feet Road, MG Road, Bengaluru 560001",
+  phone:    "+91 80 4123 8890",
+  telShort: "080 4123 8890",
+  hours:    "Mon–Sat, 9:00 AM – 8:00 PM",
+  hoursSun: "Sunday — Emergency only",
+  waNumber: "919000000000",
+  initials: "SD",
+  rating:   "4.9",
+  reviewCount:"387",
+
+  heroPhoto: "https://images.unsplash.com/photo-1629909613654-28e377c37b09?auto=format&fit=crop&w=900&q=80",
+  docPhoto:  "https://images.unsplash.com/photo-1612349317150-e413f6a5b16d?auto=format&fit=crop&w=800&q=80",
+  docName:   "Dr. Ananya Rao",
+  docRole:   "Founder & Principal Dentist, BDS · MDS (Periodontics)",
+  docCreds:  ["BDS – Government Dental College","MDS Periodontics","Invisalign Certified","12 yrs clinical"],
+
+  beforeImg:"https://images.unsplash.com/photo-1609840114035-3c981b782dfe?auto=format&fit=crop&w=800&q=80",
+  afterImg: "https://images.unsplash.com/photo-1607990281513-2c110a25bd8c?auto=format&fit=crop&w=800&q=80",
+
+  treatments: [
+    { img:"https://images.unsplash.com/photo-1581056771107-24ca5f033842?auto=format&fit=crop&w=600&q=80", name:"General Dentistry",  desc:"Checkups, scaling, fillings, crowns and gum treatment. Most visits need one appointment, not five.", price:"From ₹800",  tag:"Most booked" },
+    { img:"https://images.unsplash.com/photo-1598256989800-fe5f95da9787?auto=format&fit=crop&w=600&q=80", name:"Teeth Whitening",    desc:"Clinician-led whitening with a gel you actually use at home. Shade change in a single visit.", price:"From ₹6,500", tag:"Fast results" },
+    { img:"https://images.unsplash.com/photo-1606811971618-4486d14f3f99?auto=format&fit=crop&w=600&q=80", name:"Invisalign & Braces",desc:"Clear aligners and ceramic braces for teens and adults. We simulate your smile before you commit.", price:"From ₹1,20,000", tag:"Free consult" },
+    { img:"https://images.unsplash.com/photo-1631549916768-4119b2e5f926?auto=format&fit=crop&w=600&q=80", name:"Kids Dentistry",     desc:"First visits, fluoride, sealants and space maintainers. Plus a lot of patience, free of charge.", price:"From ₹500", tag:"Ages 2–12" },
+    { img:"https://images.unsplash.com/photo-1551076805-e1869033e561?auto=format&fit=crop&w=600&q=80", name:"Emergency Care",     desc:"Pain, swelling, a broken tooth. We hold slots open every single day for exactly this.", price:"From ₹1,200", tag:"Same day" },
+    { img:"https://images.unsplash.com/photo-1628191139360-4083564d03fd?auto=format&fit=crop&w=600&q=80", name:"Dental Implants",   desc:"Single, multiple and full-arch implants with guided placement and a written warranty.", price:"From ₹28,000", tag:"5-yr warranty" }
+  ],
+
+  plans: [
+    { name:"Check-up", sub:"The essentials, done properly", amt:"800", unit:"per visit",
+      feats:["Full oral examination","Digital X-ray included","Professional cleaning","Written treatment plan","6-month recall reminder"], cta:"Book a check-up", primary:false },
+    { name:"Complete Smile", sub:"Most popular — fixes + whitens", amt:"24,900", unit:"package",
+      feats:["Everything in Check-up, twice","Teeth whitening (upper + lower)","2 composite fillings","X-ray & oral cancer screening","Priority same-day slots","12-month warranty on fillings"], cta:"Start with a consult", primary:true },
+    { name:"Invisalign", sub:"Straight teeth, no metal", amt:"1,20,000", unit:"full treatment",
+      feats:["3D smile simulation first","All clear aligner trays","Attachments & refinements included","Retainer set provided","Interest-free EMI available"], cta:"Get a free scan", primary:false }
+  ],
+
+  reviews: [
+    { t:"I chipped a front tooth on a Friday night and genuinely panicked. Got a slot the same evening, fixed in 40 minutes, and nobody made me feel stupid about it. This is why I keep coming back.", n:"Rohan Mehta", r:"Google review · 2 weeks ago", i:"RM" },
+    { t:"After four years of avoiding dentists, the WhatsApp booking was the push I needed. No phone queueing. Dr. Rao actually explained what was happening on the X-ray instead of just listing prices.", n:"Ankita S.", r:"Google review · 1 month ago", i:"AS" },
+    { t:"Clear aligners for my braces-phobic 13-year-old. The 3D simulation before starting was the thing that convinced her. Treatment was ₹15k under the quote.", n:"Vikram N.", r:"Google review · 2 months ago", i:"VN" }
+  ],
+
+  faqs: [
+    { q:"Do you actually take emergency appointments same day?", a:"Yes. We deliberately keep one emergency slot open each day, and we hold more on Mondays and Fridays. Message or call before 6 PM and you'll normally be seen the same day." },
+    { q:"What does a new patient visit cost?", a:"₹800, which covers the full examination, digital X-rays and a professional cleaning. We show you the X-ray on screen and talk through every option with a written plan before anything else is booked. No obligation." },
+    { q:"Is the price I see the final price?", a:"For everything we quote, yes. We don't add consultation fees on top, and we don't do packages you'd never use. If a treatment turns out to need more than we originally diagnosed, we re-quote in writing before starting — that doesn't happen often, and we tell you either way." },
+    { q:"How does the WhatsApp booking work?", a:"Tap the green button and send a message. You'll get an instant reply with available slots, pick one, and you're booked. You get an automatic reminder 24 hours before, which is also the single best cure for a forgotten appointment." },
+    { q:"Do you treat nervous patients?", a:"It's a large part of what we do. The first appointment is deliberately just talking and looking — no instruments, no pressure. We also offer numbing gel and a stop signal you'll agree on beforehand, and patients can request longer slots at no extra cost." },
+    { q:"Do you offer EMI or instalments?", a:"Yes, on treatments above ₹20,000. Most banks do 6–12 months interest-free, and we handle the paperwork. Ask when you book and we'll send the paperwork link the same day." }
+  ],
+
+  chat: [
+    { side:"out", text:"Hi! Sunrise Dental Clinic here 😊 What can I help you with?" },
+    { side:"in",  text:"Hi — I chipped a tooth this morning and it hurts when I bite. Can I come in today?" },
+    { side:"out", text:"Sorry about that! Yes, we have an emergency slot open at 4:30 PM today. Shall I book it for you?" },
+    { side:"in",  text:"Please do" },
+    { side:"out", text:"Booked ✅ Today 4:30 PM with Dr. Rao. Is there anything I should know about the pain in the meantime?" },
+    { side:"in",  text:"No, it's manageable. Thank you!" },
+    { side:"out", text:"You'll get a reminder an hour before. Warm salt water rinse until then 😊 See you shortly!" }
+  ]
+};
+</script>
+<!-- ═════════════════════════ END CONFIG ═════════════════════════ -->
+
+<div class="announce">
+  <div class="wrap"><span class="dot"></span>Same-day emergency slots open today · <b>Book on WhatsApp in 30 seconds</b></div>
+</div>
+
+<header id="hdr">
+  <div class="wrap nav">
+    <a class="brand" href="#top">
+      <div class="brand-mark"><span>🦷</span></div>
+      <div class="brand-txt"><strong id="bName">Sunrise Dental</strong><em id="bTag">Modern Dentistry</em></div>
+    </a>
+    <nav class="nav-links">
+      <a href="#treatments">Treatments</a>
+      <a href="#transform">Results</a>
+      <a href="#doctor">Our doctor</a>
+      <a href="#pricing">Pricing</a>
+      <a href="#reviews">Reviews</a>
+      <a href="#faq">FAQ</a>
+    </nav>
+    <div class="nav-right">
+      <a class="nav-tel" id="navTel" href="tel:+918041238890">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M6.6 10.8c1.4 2.8 3.8 5.1 6.6 6.6l2.2-2.2c.3-.3.7-.4 1-.2 1.2.4 2.4.6 3.6.6.6 0 1 .4 1 1V20c0 .6-.4 1-1 1A17 17 0 0 1 3 4c0-.6.4-1 1-1h3.5c.6 0 1 .4 1 1 0 1.3.2 2.5.6 3.6.1.4 0 .7-.2 1z"/></svg>
+        <span id="navTelTxt">080 4123 8890</span>
+      </a>
+      <button class="btn btn-wa" onclick="openWa()">
+        <svg width="17" height="17" viewBox="0 0 24 24" fill="currentColor"><path d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91c0 1.75.46 3.45 1.32 4.95L2 22l5.25-1.38c1.45.79 3.08 1.21 4.79 1.21 5.46 0 9.91-4.45 9.91-9.91 0-2.65-1.03-5.14-2.9-7.01A9.82 9.82 0 0 0 12.04 2m0 1.67c2.2 0 4.28.86 5.83 2.42a8.2 8.2 0 0 1 2.42 5.82c0 4.54-3.7 8.24-8.25 8.24a8.2 8.2 0 0 1-4.19-1.15l-.3-.18-3.12.82.83-3.04-.2-.31a8.19 8.19 0 0 1-1.26-4.38c0-4.54 3.7-8.24 8.24-8.24m-2.3 4.6c-.15 0-.4.06-.61.29-.21.22-.8.79-.8 1.92 0 1.14.82 2.24.94 2.39.11.15 1.6 2.45 3.88 3.43.54.23.96.37 1.29.47.54.17 1.04.15 1.43.09.44-.06 1.34-.55 1.53-1.08.19-.53.19-.99.13-1.08-.06-.09-.21-.15-.44-.26-.22-.11-1.34-.66-1.54-.74-.21-.07-.36-.11-.51.12-.15.22-.58.73-.71.88-.13.15-.26.17-.48.06-.22-.11-.95-.35-1.8-1.11-.67-.59-1.12-1.32-1.25-1.54-.13-.22-.02-.34.1-.45.1-.1.22-.26.33-.4.11-.13.15-.23.22-.38.07-.15.04-.28-.02-.39-.06-.11-.5-1.23-.7-1.68-.18-.44-.37-.38-.51-.39h-.44z"/></svg>
+        Book now
+      </button>
+      <button class="burger" id="burger" onclick="toggleMenu()" aria-label="Menu"><i></i></button>
+    </div>
+  </div>
+  <div class="mobile-menu" id="mmenu">
+    <a href="#treatments" onclick="toggleMenu()">Treatments</a>
+    <a href="#transform" onclick="toggleMenu()">Results</a>
+    <a href="#doctor" onclick="toggleMenu()">Our doctor</a>
+    <a href="#pricing" onclick="toggleMenu()">Pricing</a>
+    <a href="#reviews" onclick="toggleMenu()">Reviews</a>
+    <a href="#faq" onclick="toggleMenu()">FAQ</a>
+    <a href="#contact" onclick="toggleMenu()">Contact</a>
+    <button class="btn btn-wa" onclick="openWa()">Book on WhatsApp</button>
+  </div>
+</header>
+
+<main id="top">
+
+<!-- ═══════════ HERO ═══════════ -->
+  <section class="hero" style="padding-bottom:150px">
+  <div class="wrap hero-grid">
+    <div class="hero-copy">
+      <span class="badge"><i></i><span id="bSince">Est. 2012 · Accepting new patients</span></span>
+      <h1>Dentistry that's<br>actually <em>straightforward</em>.</h1>
+      <p class="lede">No lecture, no upsell, no waiting on hold. X-rays explained on screen, prices agreed before we begin, and same-week emergency slots — every single day.</p>
+      <div class="hero-btns">
+        <button class="btn btn-wa" onclick="openWa()">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91c0 1.75.46 3.45 1.32 4.95L2 22l5.25-1.38c1.45.79 3.08 1.21 4.79 1.21 5.46 0 9.91-4.45 9.91-9.91 0-2.65-1.03-5.14-2.9-7.01A9.82 9.82 0 0 0 12.04 2m0 1.67c2.2 0 4.28.86 5.83 2.42a8.2 8.2 0 0 1 2.42 5.82c0 4.54-3.7 8.24-8.25 8.24a8.2 8.2 0 0 1-4.19-1.15l-.3-.18-3.12.82.83-3.04-.2-.31a8.19 8.19 0 0 1-1.26-4.38c0-4.54 3.7-8.24 8.24-8.24m-2.3 4.6c-.15 0-.4.06-.61.29-.21.22-.8.79-.8 1.92 0 1.14.82 2.24.94 2.39.11.15 1.6 2.45 3.88 3.43.54.23.96.37 1.29.47.54.17 1.04.15 1.43.09.44-.06 1.34-.55 1.53-1.08.19-.53.19-.99.13-1.08-.06-.09-.21-.15-.44-.26-.22-.11-1.34-.66-1.54-.74-.21-.07-.36-.11-.51.12-.15.22-.58.73-.71.88-.13.15-.26.17-.48.06-.22-.11-.95-.35-1.8-1.11-.67-.59-1.12-1.32-1.25-1.54-.13-.22-.02-.34.1-.45.1-.1.22-.26.33-.4.11-.13.15-.23.22-.38.07-.15.04-.28-.02-.39-.06-.11-.5-1.23-.7-1.68-.18-.44-.37-.38-.51-.39h-.44z"/></svg>
+          Book on WhatsApp
+        </button>
+        <a class="btn btn-ghost" href="#pricing">See pricing</a>
+      </div>
+      <div class="hero-chips">
+        <div class="chip"><i>✓</i> <span id="c1">4.9★ from 387 patients</span></div>
+        <div class="chip"><i>✓</i> Same-day emergency</div>
+        <div class="chip"><i>✓</i> EMI available</div>
+      </div>
+    </div>
+
+    <div class="hero-vis reveal">
+      <div class="hero-photo img-reveal" id="heroPhotoBox"><img id="heroImg" alt="Clinic interior" onerror="this.style.display='none'"></div>
+
+      <div class="float-card fc-1">
+        <div class="ico">⚡</div>
+        <div><b>Emergency slot</b><span>Available today, 4:30 PM</span></div>
+      </div>
+      <div class="float-card fc-2">
+        <div class="stars">★★★★★</div>
+        <b id="fcRating">4.9</b><span id="fcRev">387 Google reviews</span>
+      </div>
+
+      <div class="phone hero-chat">
+        <div class="screen">
+          <div class="notch"></div>
+          <div class="wa-head">
+            <div class="wa-av" id="pAv">SD</div>
+            <div><div class="wa-nm" id="pName">Sunrise Dental Clinic</div><div class="wa-st">● online · replies instantly</div></div>
+          </div>
+          <div class="wa-body" id="pChat"></div>
+          <div class="wa-in"><div class="wa-fake"></div><div class="wa-send"><svg width="16" height="16" viewBox="0 0 24 24" fill="#fff"><path d="M2 21l21-9L2 3v7l15 2-15 2z"/></svg></div></div>
+        </div>
+      </div>
+      <div class="hero-chat-cap" id="chatCap">Booked in 4 messages, no phone call</div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════ TRUST STRIP ═══════════ -->
+<div class="trust-strip">
+  <div class="wrap">
+    <div class="ts-item"><svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor"><path d="M9 16.2L4.8 12l-1.4 1.4L9 19 21 7l-1.4-1.4z"/></svg>Transparent pricing</div>
+    <div class="ts-item"><svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor"><path d="M9 16.2L4.8 12l-1.4 1.4L9 19 21 7l-1.4-1.4z"/></svg>Same-day emergencies</div>
+    <div class="ts-item"><svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor"><path d="M9 16.2L4.8 12l-1.4 1.4L9 19 21 7l-1.4-1.4z"/></svg>Digital X-rays</div>
+    <div class="ts-item"><svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor"><path d="M9 16.2L4.8 12l-1.4 1.4L9 19 21 7l-1.4-1.4z"/></svg>5-year implant warranty</div>
+    <div class="ts-item"><svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor"><path d="M9 16.2L4.8 12l-1.4 1.4L9 19 21 7l-1.4-1.4z"/></svg>Invisalign certified</div>
+  </div>
+</div>
+
+<!-- ═══════════ STATS ═══════════ -->
+<div class="stats" style="padding-top:46px">
+  <div class="wrap stats-grid">
+    <div class="stat reveal"><b>12,400+</b><span>Treatments completed</span></div>
+    <div class="stat reveal"><b>98%</b><span>Would recommend us</span></div>
+    <div class="stat reveal"><b>4.9★</b><span>Across Google reviews</span></div>
+    <div class="stat reveal"><b>&lt; 24h</b><span>Emergency response</span></div>
+  </div>
+</div>
+
+<!-- ═══════════ TREATMENTS ═══════════ -->
+<section id="treatments">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <span class="sec-tag">What we do</span>
+      <h2>Every treatment, <em>priced up front</em></h2>
+      <p>You'll see the number before you agree to anything. If a treatment needs more than we first diagnosed, we tell you and re-quote in writing.</p>
+    </div>
+    <div class="treat-grid" id="treatGrid"></div>
+    <div class="sec-head reveal" style="margin:44px auto 0">
+      <p style="margin-bottom:20px">Not sure what you need? That's normal — a ₹800 check-up figures it out.</p>
+      <button class="btn btn-primary" onclick="openWa()">Book a check-up</button>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════ TRANSFORM ═══════════ -->
+<section class="transform" id="transform">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <span class="sec-tag">Real results</span>
+      <h2>What six months <em>actually looks like</em></h2>
+      <p>Same patient, same clinic. We only publish results from our own cases, and only with written consent.</p>
+    </div>
+    <div class="ba reveal">
+      <div class="ba-box ba-1 img-reveal"><span class="ba-tag">Before</span><img id="baB" alt="Before" onerror="this.style.display='none'"></div>
+      <div class="ba-div"><span>→</span></div>
+      <div class="ba-box ba-2 img-reveal"><span class="ba-tag">After</span><img id="baA" alt="After" onerror="this.style.display='none'"></div>
+    </div>
+    <p class="ba-note reveal">Invisalign clear aligners · <b>24 weeks</b> · 32 aligners · patient age 29</p>
+  </div>
+</section>
+
+<!-- ═══════════ WHY ═══════════ -->
+<section style="padding-top:0">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <span class="sec-tag">Why patients stay</span>
+      <h2>Four things we refuse<br>to <em>compromise on</em></h2>
+    </div>
+    <div class="why-grid">
+      <div class="why reveal">
+        <div class="why-ico">🔬</div>
+        <h4>You see the X-ray</h4>
+        <p>We put it on the screen next to you and point at the actual problem. No "trust me" dentistry.</p>
+      </div>
+      <div class="why reveal">
+        <div class="why-ico">💰</div>
+        <h4>The price is the price</h4>
+        <p>Quoted before we start, in writing. We don't add consultation fees or bundle things you won't use.</p>
+      </div>
+      <div class="why reveal">
+        <div class="why-ico">🕐</div>
+        <h4>Slots kept for you</h4>
+        <p>One emergency slot held open daily, so a broken tooth doesn't mean a three-day wait.</p>
+      </div>
+      <div class="why reveal">
+        <div class="why-ico">💬</div>
+        <h4>No lectures</h4>
+        <p>If you haven't seen a dentist in five years, good. We celebrate that, we don't lecture you about it.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════ DOCTOR ═══════════ -->
+<section class="doc" id="doctor">
+  <div class="wrap doc-grid">
+    <div class="doc-photo img-reveal reveal"><img id="docImg" alt="Principal dentist" onerror="this.style.display='none'">
+      <div class="doc-badge"><b id="docNameT">Dr. Ananya Rao</b><span id="docRoleT">Founder & Principal Dentist</span></div>
+    </div>
+    <div class="reveal">
+      <span class="sec-tag" style="margin-bottom:14px">Meet your dentist</span>
+      <h2 style="font-size:clamp(26px,3.2vw,36px);margin-bottom:16px">You'll be in good hands, and you'll know it</h2>
+      <p style="color:var(--muted);font-size:16.4px">Dr. Rao built this practice around a single frustration: patients being told what's wrong without ever being shown. She trains every dentist here on explaining treatment in plain language — including, deliberately, the parts you can safely skip.</p>
+      <div class="doc-cred" id="docCreds"></div>
+      <div class="doc-quote">"If a patient leaves not understanding why they needed the treatment, I've done my job badly. That's the whole standard."</div>
+      <div class="doc-sign">
+        <div class="sg">A. Rao</div>
+        <div><span id="docNameS">Dr. Ananya Rao</span><span id="docRoleS">BDS · MDS Periodontics</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════ PRICING ═══════════ -->
+<section id="pricing">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <span class="sec-tag">Pricing</span>
+      <h2>You'll find these numbers <em>on this page</em></h2>
+      <p>Most clinics hide pricing behind a "call for details". Here's everything, including what a first visit costs.</p>
+    </div>
+    <div class="price-grid" id="priceGrid"></div>
+    <p class="ba-note reveal" style="margin-top:34px">Prices include GST. Interest-free EMI available on treatments above ₹20,000. Full written plan given after your free first consultation.</p>
+  </div>
+</section>
+
+<!-- ═══════════ REVIEWS ═══════════ -->
+<section style="background:var(--bg-3)" id="reviews">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <span class="sec-tag">Patient reviews</span>
+      <h2>What people say <em>afterwards</em></h2>
+      <p>Unedited, pulled straight from our Google profile.</p>
+    </div>
+    <div class="rev-grid" id="revGrid"></div>
+    <div class="sec-head reveal" style="margin:44px auto 0">
+      <button class="btn btn-ghost" onclick="openWa()">Read more on Google</button>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════ FAQ ═══════════ -->
+<section id="faq">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <span class="sec-tag">Questions</span>
+      <h2>Things people ask <em>before booking</em></h2>
+    </div>
+    <div class="faq" id="faqList"></div>
+    <div class="sec-head reveal" style="margin:40px auto 0">
+      <p style="margin-bottom:18px">Still unsure? Just ask on WhatsApp — no obligation, genuinely.</p>
+      <button class="btn btn-wa" onclick="openWa()">Ask us anything</button>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════ CTA ═══════════ -->
+<section class="cta-band" style="padding:0">
+  <div class="cta-inner">
+    <h2>In pain right now?</h2>
+    <p>We hold emergency slots every day. Message us and we'll fit you in today — usually within a few hours.</p>
+    <div class="cta-btns">
+      <button class="btn btn-light" onclick="openWa()">Book on WhatsApp</button>
+      <a class="btn btn-ghost" id="ctaTel" href="tel:+918041238890" style="background:transparent;border-color:rgba(255,255,255,.4);color:#fff">Call the clinic</a>
+    </div>
+    <div class="cta-note">Mon–Sat 9 AM – 8 PM · Sundays emergency only</div>
+  </div>
+</section>
+
+</main>
+
+<!-- ═══════════ FOOTER ═══════════ -->
+<footer id="contact">
+  <div class="wrap foot">
+    <div class="foot-grid">
+      <div>
+        <a class="brand" href="#top">
+          <div class="brand-mark"><span>🦷</span></div>
+          <div class="brand-txt"><strong id="fName">Sunrise Dental</strong><em id="fTag">Modern Dentistry</em></div>
+        </a>
+        <p style="margin-top:16px" id="fAbout">Gentle, honest dentistry in the heart of Bengaluru since 2012. Emergency slots kept open daily, and prices agreed before we begin.</p>
+        <div class="foot-ico">
+          <a href="#" onclick="openWa(event)" aria-label="WhatsApp"><svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91c0 1.75.46 3.45 1.32 4.95L2 22l5.25-1.38c1.45.79 3.08 1.21 4.79 1.21 5.46 0 9.91-4.45 9.91-9.91 0-2.65-1.03-5.14-2.9-7.01A9.82 9.82 0 0 0 12.04 2m0 1.67c2.2 0 4.28.86 5.83 2.42a8.2 8.2 0 0 1 2.42 5.82c0 4.54-3.7 8.24-8.25 8.24a8.2 8.2 0 0 1-4.19-1.15l-.3-.18-3.12.82.83-3.04-.2-.31a8.19 8.19 0 0 1-1.26-4.38c0-4.54 3.7-8.24 8.24-8.24m-2.3 4.6c-.15 0-.4.06-.61.29-.21.22-.8.79-.8 1.92 0 1.14.82 2.24.94 2.39.11.15 1.6 2.45 3.88 3.43.54.23.96.37 1.29.47.54.17 1.04.15 1.43.09.44-.06 1.34-.55 1.53-1.08.19-.53.19-.99.13-1.08-.06-.09-.21-.15-.44-.26-.22-.11-1.34-.66-1.54-.74-.21-.07-.36-.11-.51.12-.15.22-.58.73-.71.88-.13.15-.26.17-.48.06-.22-.11-.95-.35-1.8-1.11-.67-.59-1.12-1.32-1.25-1.54-.13-.22-.02-.34.1-.45.1-.1.22-.26.33-.4.11-.13.15-.23.22-.38.07-.15.04-.28-.02-.39-.06-.11-.5-1.23-.7-1.68-.18-.44-.37-.38-.51-.39h-.44z"/></svg></a>
+          <a href="#" aria-label="Instagram"><svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.16c3.2 0 3.58.01 4.85.07 1.17.05 1.8.25 2.23.41.56.22.96.48 1.38.9.42.42.68.82.9 1.38.16.42.36 1.06.41 2.23.06 1.27.07 1.65.07 4.85s-.01 3.58-.07 4.85c-.05 1.17-.25 1.8-.41 2.23-.22.56-.48.96-.9 1.38-.42.42-.82.68-1.38.9-.42.16-1.06.36-2.23.41-1.27.06-1.65.07-4.85.07s-3.58-.01-4.85-.07c-1.17-.05-1.8-.25-2.23-.41-.56-.22-.96-.48-1.38-.9-.42-.42-.68-.82-.9-1.38-.16-.42-.36-1.06-.41-2.23C2.17 15.58 2.16 15.2 2.16 12s.01-3.58.07-4.85c.05-1.17.25-1.8.41-2.23.22-.56.48-.96.9-1.38.42-.42.82-.68 1.38-.9.42-.16 1.06-.36 2.23-.41C8.42 2.17 8.8 2.16 12 2.16m0 2c-3.14 0-3.51.01-4.75.07-1.15.05-1.77.24-2.19.4-.55.22-.94.47-1.35.88-.41.41-.66.8-.88 1.35-.16.42-.35 1.04-.4 2.19-.06 1.24-.07 1.61-.07 4.75s.01 3.51.07 4.75c.05 1.15.24 1.77.4 2.19.22.55.47.94.88 1.35.41.41.8.66 1.35.88.42.16 1.04.35 2.19.4 1.24.06 1.61.07 4.75.07s3.51-.01 4.75-.07c1.15-.05 1.77-.24 2.19-.4.55-.22.94-.47 1.35-.88.41-.41.66-.8.88-1.35.16-.42.35-1.04.4-2.19.06-1.24.07-1.61.07-4.75s-.01-3.51-.07-4.75c-.05-1.15-.24-1.77-.4-2.19a3.6 3.6 0 0 0-.88-1.35 3.6 3.6 0 0 0-1.35-.88c-.42-.16-1.04-.35-2.19-.4-1.24-.06-1.61-.07-4.75-.07m0 3.34a6.5 6.5 0 1 1 0 13 6.5 6.5 0 0 1 0-13m0 10.72a4.22 4.22 0 1 0 0-8.44 4.22 4.22 0 0 0 0 8.44m6.49-10.9a1.52 1.52 0 1 1-3.03 0 1.52 1.52 0 0 1 3.03 0"/></svg></a>
+          <a href="#" aria-label="Facebook"><svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M22 12a10 10 0 1 0-11.56 9.88v-6.99H7.9V12h2.54V9.8c0-2.5 1.49-3.89 3.77-3.89 1.1 0 2.24.2 2.24.2v2.46h-1.26c-1.24 0-1.63.77-1.63 1.56V12h2.78l-.45 2.89h-2.33v6.99A10 10 0 0 0 22 12"/></svg></a>
+        </div>
+      </div>
+      <div>
+        <h5>Treatments</h5>
+        <a href="#treatments">General Dentistry</a>
+        <a href="#treatments">Teeth Whitening</a>
+        <a href="#treatments">Invisalign & Braces</a>
+        <a href="#treatments">Kids Dentistry</a>
+        <a href="#treatments">Dental Implants</a>
+        <a href="#treatments">Emergency Care</a>
+      </div>
+      <div>
+        <h5>Clinic</h5>
+        <a href="#doctor">Our doctor</a>
+        <a href="#pricing">Pricing</a>
+        <a href="#transform">Results</a>
+        <a href="#reviews">Reviews</a>
+        <a href="#faq">FAQ</a>
+      </div>
+      <div>
+        <h5>Opening hours</h5>
+        <div class="hours-row"><span>Mon – Sat</span><b id="hWeek">9 AM – 8 PM</b></div>
+        <div class="hours-row"><span>Sunday</span><b>Emergency only</b></div>
+        <h5 style="margin-top:26px">Contact</h5>
+        <a id="fPhone" href="tel:+918041238890">080 4123 8890</a>
+        <a href="#" onclick="openWa(event)">WhatsApp us</a>
+      </div>
+    </div>
+
+    <div class="map-card">
+      <div class="pin">📍</div>
+      <div>
+        <b id="fAddrT">2nd Floor, Orion Plaza, MG Road, Bengaluru 560001</b>
+        <span>Free basement parking · 2 min walk from MG Road Metro</span>
+      </div>
+    </div>
+
+    <div class="concept-note">
+      <strong>Concept mock-up</strong> — a sample design prepared to show what a website like this could look like. This is not a live website, and the contact details shown are placeholders.
+    </div>
+
+    <div class="copy">
+      <span>© <span id="year"></span> <span id="fName2">Sunrise Dental Clinic</span></span>
+      <a href="#">Privacy Policy</a>
+      <a href="#">Terms of Service</a>
+      <span id="fSince">Est. 2012</span>
+    </div>
+  </div>
+</footer>
+
+<!-- ═══════════ FLOATING ═══════════ -->
+<button class="wa-float" onclick="openWa()" aria-label="Chat on WhatsApp">
+  <svg width="21" height="21" viewBox="0 0 24 24" fill="#fff"><path d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91c0 1.75.46 3.45 1.32 4.95L2 22l5.25-1.38c1.45.79 3.08 1.21 4.79 1.21 5.46 0 9.91-4.45 9.91-9.91 0-2.65-1.03-5.14-2.9-7.01A9.82 9.82 0 0 0 12.04 2m0 1.67c2.2 0 4.28.86 5.83 2.42a8.2 8.2 0 0 1 2.42 5.82c0 4.54-3.7 8.24-8.25 8.24a8.2 8.2 0 0 1-4.19-1.15l-.3-.18-3.12.82.83-3.04-.2-.31a8.19 8.19 0 0 1-1.26-4.38c0-4.54 3.7-8.24 8.24-8.24m-2.3 4.6c-.15 0-.4.06-.61.29-.21.22-.8.79-.8 1.92 0 1.14.82 2.24.94 2.39.11.15 1.6 2.45 3.88 3.43.54.23.96.37 1.29.47.54.17 1.04.15 1.43.09.44-.06 1.34-.55 1.53-1.08.19-.53.19-.99.13-1.08-.06-.09-.21-.15-.44-.26-.22-.11-1.34-.66-1.54-.74-.21-.07-.36-.11-.51.12-.15.22-.58.73-.71.88-.13.15-.26.17-.48.06-.22-.11-.95-.35-1.8-1.11-.67-.59-1.12-1.32-1.25-1.54-.13-.22-.02-.34.1-.45.1-.1.22-.26.33-.4.11-.13.15-.23.22-.38.07-.15.04-.28-.02-.39-.06-.11-.5-1.23-.7-1.68-.18-.44-.37-.38-.51-.39h-.44z"/></svg>
+  <span class="wa-float-txt">Book on WhatsApp</span>
+</button>
+
+<div class="mobile-bar">
+  <a class="btn btn-ghost" id="mbTel" href="tel:+918041238890">📞 Call</a>
+  <button class="btn btn-wa" onclick="openWa()">Book on WhatsApp</button>
+</div>
+
+<!-- ═══════════ MODAL ═══════════ -->
+<div class="modal-bg" id="waBg">
+  <div class="modal">
+    <div class="modal-head">
+      <div class="wa-av" id="mAv">SD</div>
+      <div><div class="wa-nm" id="mName">Sunrise Dental Clinic</div><div class="wa-st">Typically replies in minutes</div></div>
+      <button class="modal-x" onclick="closeWa()" aria-label="Close">&times;</button>
+    </div>
+    <div class="modal-body" id="mBody"></div>
+    <div class="modal-foot">
+      <input id="mInput" placeholder="Type a message…" onkeydown="if(event.key==='Enter')sendWa()">
+      <button class="modal-send" onclick="sendWa()" aria-label="Send"><svg width="18" height="18" viewBox="0 0 24 24" fill="#fff"><path d="M2 21l21-9L2 3v7l15 2-15 2z"/></svg></button>
+    </div>
+  </div>
+</div>
+
+<script>
+document.documentElement.classList.add('js');
+</script>
+<script>
+const C = window.CLINIC;
+const $ = id => document.getElementById(id);
+const tel = C.phone.replace(/\s/g,'');
+const setImg = (id,src)=>{ const el=$(id); if(el){ el.src=src; el.alt=id; } };
+
+/* ─── paint config ─── */
+$('bName').textContent = C.name;
+$('bTag').textContent = C.tagline;
+$('fName').textContent = C.name;
+$('fTag').textContent = C.tagline;
+$('fName2').textContent = C.name;
+$('fSince').textContent = C.since;
+$('bSince').textContent = C.since + ' · Accepting new patients';
+$('pAv').textContent = $('mAv').textContent = C.initials;
+$('pName').textContent = $('mName').textContent = C.name;
+$('navTel').href = $('fPhone').href = $('ctaTel').href = $('mbTel').href = 'tel:' + tel;
+$('navTelTxt').textContent = $('fPhone').textContent = $('ctaTel').textContent = $('mbTel').textContent = C.telShort;
+$('fcRating').textContent = C.rating;
+$('fcRev').textContent  = C.reviewCount + ' Google reviews';
+$('c1').textContent    = C.rating + '★ from ' + C.reviewCount + ' patients';
+$('fAddrT').textContent = C.address;
+$('hWeek').textContent  = C.hours.replace('Mon–Sat, ','');
+$('year').textContent   = new Date().getFullYear();
+$('docNameT').textContent = $('docNameS').textContent = C.docName;
+$('docRoleT').textContent = C.docRole;
+$('docRoleS').textContent = C.docCreds.slice(-2).join(' · ');
+$('fAbout').textContent  = 'Gentle, honest dentistry in the heart of Bengaluru since 2012. Emergency slots kept open daily, and prices agreed before we begin.';
+$('chatCap').textContent  = 'Booked in 4 messages, no phone call';
+document.title = C.name + ' — Modern Dentistry';
+
+setImg('heroImg', C.heroPhoto);
+setImg('docImg',  C.docPhoto);
+setImg('baB', C.beforeImg);
+setImg('baA', C.afterImg);
+
+/* ─── treatments ─── */
+$('treatGrid').innerHTML = C.treatments.map((t,i)=>`
+  <article class="treat reveal" style="transition-delay:${i*70}ms">
+    <div class="treat-img img-reveal">
+      <span class="treat-badge">${t.tag}</span>
+      <img src="${t.img}" alt="${t.name}" loading="lazy" onerror="this.style.display='none'">
+    </div>
+    <div class="treat-body">
+      <h3>${t.name}</h3>
+      <p>${t.desc}</p>
+      <div class="treat-foot">
+        <span class="treat-price">${t.price}</span>
+        <span class="treat-link">Book <span>&rarr;</span></span>
+      </div>
+    </div>
+  </article>`).join('');
+
+/* ─── pricing ─── */
+$('priceGrid').innerHTML = C.plans.map((p,i)=>`
+  <div class="plan reveal ${p.primary?'plan-featured':''}" style="transition-delay:${i*80}ms">
+    ${p.primary?'<span class="plan-flag">Most booked</span>':''}
+    <h3>${p.name}</h3>
+    <p class="plan-sub">${p.sub}</p>
+    <div class="plan-amt"><b>₹${p.amt}</b><span>${p.unit}</span></div>
+    <ul class="plan-list">${p.feats.map(f=>`<li>${f}</li>`).join('')}</ul>
+    <button class="btn ${p.primary?'btn-wa':'btn-ghost'}" onclick="openWa()">${p.cta}</button>
+  </div>`).join('');
+
+/* ─── reviews ─── */
+$('revGrid').innerHTML = C.reviews.map((r,i)=>`
+  <article class="rev reveal" style="transition-delay:${i*80}ms">
+    <div class="rev-stars">★★★★★</div>
+    <p>${r.t}</p>
+    <div class="rev-who">
+      <div class="rev-av">${r.i}</div>
+      <div><b>${r.n}</b><span>${r.r}</span></div>
+    </div>
+  </article>`).join('');
+
+/* ─── doc creds ─── */
+$('docCreds').innerHTML = C.docCreds.map(c=>`<span class="cred">${c}</span>`).join('');
+
+/* ─── faq ─── */
+$('faqList').innerHTML = C.faqs.map((f,i)=>`
+  <div class="faq-item reveal" style="transition-delay:${i*50}ms">
+    <button class="faq-q" onclick="toggleFaq(this)">${f.q}<i>+</i></button>
+    <div class="faq-a"><p>${f.a}</p></div>
+  </div>`).join('');
+
+function toggleFaq(btn){
+  const item = btn.parentElement, ans = item.querySelector('.faq-a');
+  const open = item.classList.contains('open');
+  document.querySelectorAll('.faq-item.open').forEach(o=>{
+    o.classList.remove('open');
+    o.querySelector('.faq-a').style.maxHeight = null;
+  });
+  if(!open){ item.classList.add('open'); ans.style.maxHeight = ans.scrollHeight + 'px'; }
+}
+
+/* ─── hero phone: looping conversation ─── */
+let pi = 0;
+(function play(){
+  const box = $('pChat');
+  if(!box) return;
+  if(pi >= C.chat.length){
+    setTimeout(()=>{ box.innerHTML=''; pi=0; play(); }, 3800);
+    return;
+  }
+  const m = C.chat[pi++];
+  const b = document.createElement('div');
+  b.className = 'bubble ' + m.side;
+  b.textContent = m.text;
+  box.appendChild(b);
+  setTimeout(play, 1350);
+})();
+
+/* ─── modal chat ─── */
+const timeNow = () => new Date().toLocaleTimeString('en-US',{hour:'numeric',minute:'2-digit'});
+function bub(side,text){
+  return `<div class="bubble ${side}">${text}<span class="tm">${timeNow()}</span></div>`;
+}
+let mi = 0;
+function step(){
+  const box = $('mBody');
+  if(mi >= C.chat.length){
+    const t = document.createElement('div');
+    t.className = 'typing'; t.innerHTML = '<i></i><i></i><i></i>';
+    box.appendChild(t);
+    setTimeout(()=>{ t.remove(); mi = 0; $('mInput').value = ''; }, 1500);
+    return;
+  }
+  const m = C.chat[mi++];
+  const t = document.createElement('div');
+  t.className = 'typing'; t.innerHTML = '<i></i><i></i><i></i>';
+  box.appendChild(t);
+  setTimeout(()=>{
+    t.remove();
+    box.insertAdjacentHTML('beforeend', bub(m.side, m.text));
+    box.scrollTop = box.scrollHeight;
+    if(mi < C.chat.length) step();
+  }, 850);
+}
+function openWa(e){
+  if(e) e.preventDefault();
+  $('waBg').classList.add('on');
+  if(mi === 0) step();
+}
+function closeWa(){ $('waBg').classList.remove('on'); }
+$('waBg').addEventListener('click', e => { if(e.target.id === 'waBg') closeWa(); });
+document.addEventListener('keydown', e => { if(e.key === 'Escape') closeWa(); });
+function sendWa(){
+  const v = $('mInput').value.trim();
+  if(!v) return;
+  const box = $('mBody');
+  box.insertAdjacentHTML('beforeend', bub('out', v));
+  $('mInput').value = '';
+  box.scrollTop = box.scrollHeight;
+  setTimeout(()=>{
+    box.insertAdjacentHTML('beforeend', bub('in', `Thanks! Our team will reply in a few minutes. For anything urgent, call ${C.telShort}.`));
+    box.scrollTop = box.scrollHeight;
+  }, 950);
+}
+
+/* ─── mobile menu ─── */
+function toggleMenu(){
+  $('mmenu').classList.toggle('on');
+  $('burger').classList.toggle('on');
+}
+
+/* ─── sticky header shadow ─── */
+addEventListener('scroll', () => {
+  $('hdr').classList.toggle('stuck', scrollY > 8);
+}, {passive:true});
+
+/* ─── scroll reveal ─── */
+const io = new IntersectionObserver(es => es.forEach(e => {
+  if(e.isIntersecting){ e.target.classList.add('in'); io.unobserve(e.target); }
+}), {threshold:.1, rootMargin:'0px 0px -40px'});
+document.querySelectorAll('.reveal, .img-reveal').forEach(el => io.observe(el));
+
+/* Failsafe: never leave content permanently hidden. If the observer hasn't
+   revealed everything shortly after load, show it all. */
+setTimeout(() => {
+  document.querySelectorAll('.reveal:not(.in), .img-reveal:not(.in)').forEach(el => el.classList.add('in'));
+}, 1200);
+</script>
+</body>
+</html>
